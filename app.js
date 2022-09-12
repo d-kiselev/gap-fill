@@ -29,9 +29,8 @@ function normalize(text) {
 
 function readUrl(url, cb) {
   const https = require('node:https');
-  // const url = "https://wiadomosci.onet.pl/pogoda/pochmurny-weekend-imgw-ostrzega-przed-burzami/k2ktrxc";
   const options = new URL(url);
-
+  
   https.get(options, function(response) {
     var buffer = '';
     response.on('data', (chunk) => {
